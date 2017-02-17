@@ -1,0 +1,9 @@
+<template name="task">
+  <li class="{{#if started}}stop-item{{/if}}">
+    <button class="delete">&times;</button>
+
+    <button class="toggle-time {{#if started}}stop{{/if}}">{{#if started}}Stop{{else}}Start{{/if}}</button>
+
+    <span class="text">{{text}}</span>
+  </li>
+</template>
