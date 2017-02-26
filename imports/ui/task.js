@@ -63,6 +63,6 @@ Template.task.events({
     }
   },
   'click .delete'() {
-    Tasks.remove(this._id);
+    Meteor.call('tasks.delete', this._id);
   },
 });

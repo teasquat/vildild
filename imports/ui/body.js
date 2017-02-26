@@ -23,11 +23,7 @@ Template.body.events({
     if (text.length == 0) {return false}
 
     // Insert a task into the collection
-    Tasks.insert({
-      text,
-      createdAt: new Date(), // current time
-      currentTimestamp: null,
-    });
+    Meteor.call('tasks.insert', text);
 
     // Clear form
     target.text.value = '';
